@@ -259,13 +259,13 @@ export default class Response extends React.Component {
           ) : null}
 
         </td>
-        {isOAS3 ? <td className="response-col_links">
+        {/* {isOAS3 ? <td className="response-col_links">
           { links ?
             links.toSeq().entrySeq().map(([key, link]) => {
               return <OperationLink key={key} name={key} link={ link } getComponent={getComponent}/>
             })
           : <i>No links</i>}
-        </td> : null}
+        </td> : null} */}
       </tr>
     )
   }

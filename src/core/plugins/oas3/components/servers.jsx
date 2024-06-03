@@ -82,7 +82,7 @@ const Servers = ({
             .map((server) => (
               <option value={server.get("url")} key={server.get("url")}>
                 {server.get("url")}
-                {server.get("description") && ` - ${server.get("description")}`}
+                {/* {server.get("description") && ` - ${server.get("description")}`} */}
               </option>
             ))
             .toArray()}

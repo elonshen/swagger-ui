@@ -13,7 +13,14 @@ window.onload = function() {
     plugins: [
       SwaggerUIBundle.plugins.DownloadUrl
     ],
-    layout: "StandaloneLayout"
+    layout: "StandaloneLayout",
+    locale: {
+      strings: {
+        "parameters": "参数",
+        "responses": "响应",
+        // 添加更多需要修改的词
+      }
+    }
   });
 
   //</editor-fold>

@@ -3,9 +3,10 @@ import PropTypes from "prop-types"
 
 
 const OpenAPIVersion = ({ oasVersion }) => (
-  <small className="version-stamp">
-    <pre className="version">OAS {oasVersion}</pre>
-  </small>
+  <span></span>
+  // <small className="version-stamp">
+  //   <pre className="version"></pre>
+  // </small>
 )
 
 OpenAPIVersion.propTypes = {

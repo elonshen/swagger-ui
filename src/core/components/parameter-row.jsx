@@ -286,7 +286,7 @@ export default class ParameterRow extends Component {
         <td className="parameters-col_name">
           <div className={required ? "parameter__name required" : "parameter__name"}>
             { param.get("name") }
-            { !required ? null : <span>&nbsp;*</span> }
+            {/* { !required ? null : <span>&nbsp;*</span> } */}
           </div>
           <div className="parameter__type">
             { type }
@@ -296,8 +296,9 @@ export default class ParameterRow extends Component {
           <div className="parameter__deprecated">
             { isOAS3 && param.get("deprecated") ? "deprecated": null }
           </div>
-          <div className="parameter__in">({ param.get("in") })</div>
+          <div className="parameter__in">({ param.get("in") === "path" ? "路径参数" : param.get("in") === "query" ? "查询参数" : param.get("in") === "header" ? "请求头" : param.get("in") === "body" ? "请求体" : param.get("in") === "formData" ? "表单数据" : "未知" })</div>
         </td>
+
 
         <td className="parameters-col_description">
           { param.get("description") ? <Markdown source={ param.get("description") }/> : null }
@@ -311,7 +312,7 @@ export default class ParameterRow extends Component {
           }
 
           { (bodyParam || !isExecute) && paramDefaultValue !== undefined ?
-            <Markdown className="parameter__default" source={"<i>Default value</i> : " + paramDefaultValue}/>
+            <Markdown className="parameter__default" source={"<span>默认值</span> : " + paramDefaultValue}/>
             : null
           }
 

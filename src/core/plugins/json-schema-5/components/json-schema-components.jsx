@@ -253,7 +253,7 @@ export class JsonSchema_array extends PureComponent {
                     title={needsRemoveError.length ? needsRemoveError : ""}
 
                     onClick={() => this.removeItem(i)}
-                  > - </Button>
+                  > 删除 </Button>
                 ) : null}
               </div>
             )
@@ -266,7 +266,7 @@ export class JsonSchema_array extends PureComponent {
             title={arrayErrors.length ? arrayErrors : ""}
             onClick={this.addItem}
           >
-            Add {schemaItemsType ? `${schemaItemsType} ` : ""}item
+            增加 {schemaItemsType ? `${schemaItemsType} ` : ""}项
           </Button>
         ) : null}
       </div>

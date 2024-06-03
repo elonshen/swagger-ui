@@ -66,7 +66,7 @@ export default class HttpAuth extends React.Component {
             (http, Basic)
             <JumpToPath path={[ "securityDefinitions", name ]} />
           </h4>
-        { username && <h6>Authorized</h6> }
+        { username && <h6>已登陆</h6> }
         <Row>
           <Markdown source={ schema.get("description") } />
         </Row>
@@ -115,17 +115,17 @@ export default class HttpAuth extends React.Component {
     if(scheme === "bearer") {
       return (
         <div>
-          <h4>
+          {/* <h4>
             <code>{ name || schema.get("name") }</code>&nbsp;
               (http, Bearer)
               <JumpToPath path={[ "securityDefinitions", name ]} />
-            </h4>
-            { value && <h6>Authorized</h6>}
+            </h4> */}
+            { value && <h6>已登陆</h6>}
             <Row>
               <Markdown source={ schema.get("description") } />
             </Row>
             <Row>
-              <label htmlFor="auth-bearer-value">Value:</label>
+              <label htmlFor="auth-bearer-value">值:</label>
               {
                 value ? <code> ****** </code>
               : <Col>

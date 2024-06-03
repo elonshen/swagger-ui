@@ -93,7 +93,7 @@ export default class Responses extends React.Component {
     return (
       <div className="responses-wrapper">
         <div className="opblock-section-header">
-          <h4>Responses</h4>
+          <h4>返回值列表</h4>
             { specSelectors.isOAS3() ? null : <label htmlFor={controlId}>
               <span>Response content type</span>
               <ContentType value={producesValue}
@@ -116,7 +116,7 @@ export default class Responses extends React.Component {
                                                 path={ this.props.path }
                                                 method={ this.props.method }
                                                 displayRequestDuration={ displayRequestDuration } />
-                                  <h4>Responses</h4>
+                                  <h4>返回值列表</h4>
                                 </div>
 
           }
@@ -124,9 +124,9 @@ export default class Responses extends React.Component {
           <table aria-live="polite" className="responses-table" id={regionId} role="region">
             <thead>
               <tr className="responses-header">
-                <td className="col_header response-col_status">Code</td>
-                <td className="col_header response-col_description">Description</td>
-                { specSelectors.isOAS3() ? <td className="col col_header response-col_links">Links</td> : null }
+                <td className="col_header response-col_status">状态码</td>
+                <td className="col_header response-col_description">描述</td>
+                {/* { specSelectors.isOAS3() ? <td className="col col_header response-col_links">Links</td> : null } */}
               </tr>
             </thead>
             <tbody>

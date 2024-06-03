@@ -5,7 +5,7 @@ import ImPropTypes from "react-immutable-proptypes"
 const Headers = ( { headers } )=>{
   return (
     <div>
-      <h5>Response headers</h5>
+      <h5>返回头</h5>
       <pre className="microlight">{headers}</pre>
     </div>)
 }
@@ -79,17 +79,17 @@ export default class LiveResponse extends React.Component {
         }
         { url && <div>
             <div className="request-url">
-              <h4>Request URL</h4>
+              <h4>请求地址</h4>
               <pre className="microlight">{url}</pre>
             </div>
           </div>
         }
-        <h4>Server response</h4>
+        <h4>返回信息</h4>
         <table className="responses-table live-responses-table">
           <thead>
           <tr className="responses-header">
-            <td className="col_header response-col_status">Code</td>
-            <td className="col_header response-col_description">Details</td>
+            <td className="col_header response-col_status">状态码</td>
+            <td className="col_header response-col_description">详情</td>
           </tr>
           </thead>
           <tbody>

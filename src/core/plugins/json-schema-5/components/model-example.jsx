@@ -79,7 +79,7 @@ const ModelExample = ({
             onClick={onTabChange}
             role="tab"
           >
-            {isExecute ? "Edit Value" : "Example Value"}
+            {isExecute ? "Edit Value" : "示例"}
           </button>
         </li>
         {schema && (
@@ -96,7 +96,7 @@ const ModelExample = ({
               onClick={onTabChange}
               role="tab"
             >
-              {isOAS3 ? "Schema" : "Model"}
+              {isOAS3 ? "字段说明" : "字段说明"}
             </button>
           </li>
         )}

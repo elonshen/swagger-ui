@@ -25,8 +25,8 @@ export default class Headers extends React.Component {
         <table className="headers">
           <thead>
             <tr className="header-row">
-              <th className="header-col">Name</th>
-              <th className="header-col">Description</th>
+              <th className="header-col">名称</th>
+              <th className="header-col">描述</th>
               <th className="header-col">Type</th>
             </tr>
           </thead>

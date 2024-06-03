@@ -155,18 +155,19 @@ class TopBar extends React.Component {
     }
 
     return (
-      <div className="topbar">
-        <div className="wrapper">
-          <div className="topbar-wrapper">
-            <Link>
-              <Logo/>
-            </Link>
-            <form className="download-url-wrapper" onSubmit={formOnSubmit}>
-              {control.map((el, i) => cloneElement(el, { key: i }))}
-            </form>
-          </div>
-        </div>
-      </div>
+      <div></div>
+      // <div className="topbar">
+      //   <div className="wrapper">
+      //     <div className="topbar-wrapper">
+      //       <Link>
+      //         <Logo/>
+      //       </Link>
+      //       <form className="download-url-wrapper" onSubmit={formOnSubmit}>
+      //         {control.map((el, i) => cloneElement(el, { key: i }))}
+      //       </form>
+      //     </div>
+      //   </div>
+      // </div>
     )
   }
 }

@@ -55,7 +55,7 @@ export default class ApiKeyAuth extends React.Component {
           <code>{ name || schema.get("name") }</code>&nbsp;(apiKey)
           <JumpToPath path={[ "securityDefinitions", name ]} />
         </h4>
-        { value && <h6>Authorized</h6>}
+        { value && <h6>已登陆</h6>}
         <Row>
           <Markdown source={ schema.get("description") } />
         </Row>
@@ -66,7 +66,7 @@ export default class ApiKeyAuth extends React.Component {
           <p>In: <code>{ schema.get("in") }</code></p>
         </Row>
         <Row>
-          <label htmlFor="api_key_value">Value:</label>
+          <label htmlFor="api_key_value">值:</label>
           {
             value ? <code> ****** </code>
                   : <Col>

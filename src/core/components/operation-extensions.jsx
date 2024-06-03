@@ -14,7 +14,7 @@ export const OperationExt = ({ extensions, getComponent }) => {
             <thead>
               <tr>
                 <td className="col_header">Field</td>
-                <td className="col_header">Value</td>
+                <td className="col_header">值</td>
               </tr>
             </thead>
             <tbody>

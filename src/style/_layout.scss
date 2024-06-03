@@ -43,23 +43,27 @@
 
 @mixin method($color)
 {
-    border-color: $color;
-    background: rgba($color, .1);
+    border-color: #0000001a;
+    border-width: 0 0 1px 0; /* 仅设置下边框的宽度，其他边框宽度为0 */
+    border-style: solid; /* 设置边框样式 */
+    border-radius: 0;
+    // background: rgba($color, .1);
+    // background-color: #fff;
 
     .opblock-summary-method
     {
         background: $color;
     }
 
-    .opblock-summary
-    {
-        border-color: $color;
-    }
+    // .opblock-summary
+    // {
+    //     border-color: $color;
+    // }
 
-    .tab-header .tab-item.active h4 span:after
-    {
-        background: $color;
-    }
+    // .tab-header .tab-item.active h4 span:after
+    // {
+    //     background: $color;
+    // }
 }
 
 
@@ -127,7 +131,7 @@
 
 .parameter__type
 {
-    font-size: 12px;
+    // font-size: 12px;
 
     padding: 5px 0;
 
@@ -142,7 +146,7 @@
     &__title {
         display: block;
         font-size: 1.1em;
-        font-weight: bold;
+        // font-weight: bold;
         margin-bottom: 0.75em;
     }
 
@@ -150,7 +154,7 @@
         margin-top: 1.5em;
     }
     &__section-header {
-        font-weight: bold;
+        // font-weight: bold;
         font-size: .9rem;
         margin-bottom: .5rem;
         // color: #555;
@@ -164,7 +168,7 @@
       width: 100%;
     }
     &__section-label {
-        font-weight: bold;
+        // font-weight: bold;
         font-size: .9rem;
         margin-right: .5rem;
     }
@@ -175,7 +179,7 @@
         margin-top: 1.5em;
     }
     &__section-header {
-        font-weight: bold;
+        // font-weight: bold;
         font-size: .9rem;
         margin-bottom: .5rem;
         // color: #555;
@@ -202,7 +206,7 @@
 
     border: 1px solid $opblock-border-color;
     border-radius: 4px;
-    box-shadow: 0 0 3px rgba($opblock-box-shadow-color,.19);
+    // box-shadow: 0 0 3px rgba($opblock-box-shadow-color,.19);
 
     .tab-header
     {
@@ -250,13 +254,13 @@
     }
 
 
-    &.is-open
-    {
-        .opblock-summary
-        {
-            border-bottom: 1px solid $opblock-isopen-summary-border-bottom-color;
-        }
-    }
+    // &.is-open
+    // {
+    //     .opblock-summary
+    //     {
+    //         border-bottom: 1px solid $opblock-isopen-summary-border-bottom-color;
+    //     }
+    // }
 
     .opblock-section-header
     {
@@ -267,13 +271,13 @@
 
         min-height: 50px;
 
-        background: rgba($opblock-isopen-section-header-background-color,.8);
-        box-shadow: 0 1px 2px rgba($opblock-isopen-section-header-box-shadow-color,.1);
+        // background: rgba($opblock-isopen-section-header-background-color,.8);
+        // box-shadow: 0 1px 2px rgba($opblock-isopen-section-header-box-shadow-color,.1);
 
         >label
         {
             font-size: 12px;
-            font-weight: bold;
+            // font-weight: bold;
 
             display: flex;
             align-items: center;
@@ -304,7 +308,7 @@
     .opblock-summary-method
     {
         font-size: 14px;
-        font-weight: bold;
+        // font-weight: bold;
         @media (max-width: 768px) {
           font-size: 12px;
         }
@@ -784,8 +788,8 @@
     margin: 0 0 20px 0;
     padding: 30px 0;
 
-    background: $scheme-container-background-color;
-    box-shadow: 0 1px 2px 0 rgba($scheme-container-box-shadow-color,.15);
+    // background: $scheme-container-background-color;
+    // box-shadow: 0 1px 2px 0 rgba($scheme-container-box-shadow-color,.15);
 
     .schemes
     {
@@ -811,7 +815,7 @@
             > label
             {
                 font-size: 12px;
-                font-weight: bold;
+                // font-weight: bold;
 
                 display: flex;
                 flex-direction: column;
@@ -879,7 +883,7 @@
         &:after
         {
             font-size: 10px;
-            font-weight: bold;
+            // font-weight: bold;
 
             position: absolute;
             top: 50%;
@@ -928,6 +932,8 @@
 .response-controls {
     padding-top: 1em;
     display: flex;
+    visibility: hidden;
+    height: 0;
 }
 
 .response-control-media-type {
@@ -1050,10 +1056,10 @@ a.nostyle {
 {
     font-weight: normal;
 
-    &.shown
-    {
-        font-weight: bold;
-    }
+    // &.shown
+    // {
+    //     font-weight: bold;
+    // }
 }
 
 span
@@ -1066,6 +1072,6 @@ span
     &.token-not-formatted
     {
         color: #555;
-        font-weight: bold;
+        // font-weight: bold;
     }
 }

@@ -144,11 +144,11 @@ export default class Oauth2 extends React.Component {
 
     return (
       <div>
-        <h4>{name} (OAuth2, { flowToDisplay }) <JumpToPath path={[ "securityDefinitions", name ]} /></h4>
+        {/* <h4>{name} (OAuth2, { flowToDisplay }) <JumpToPath path={[ "securityDefinitions", name ]} /></h4> */}
         { !this.state.appName ? null : <h5>Application: { this.state.appName } </h5> }
         { description && <Markdown source={ schema.get("description") } /> }
 
-        { isAuthorized && <h6>Authorized</h6> }
+        { isAuthorized && <h6>已登陆</h6> }
 
         { oidcUrl && <p>OpenID Connect URL: <code>{ oidcUrl }</code></p> }
         { ( flow === AUTH_FLOW_IMPLICIT || flow === AUTH_FLOW_ACCESS_CODE ) && <p>Authorization URL: <code>{ schema.get("authorizationUrl") }</code></p> }
@@ -186,7 +186,7 @@ export default class Oauth2 extends React.Component {
                     : <Col tablet={10} desktop={10}>
                       <select id="password_type" data-name="passwordType" onChange={ this.onInputChange }>
                         <option value="basic">Authorization header</option>
-                        <option value="request-body">Request body</option>
+                        <option value="request-body">请求体</option>
                       </select>
                     </Col>
                 }
@@ -268,11 +268,11 @@ export default class Oauth2 extends React.Component {
         }
         <div className="auth-btn-wrapper">
         { isValid &&
-          ( isAuthorized ? <Button className="btn modal-btn auth authorize" onClick={ this.logout } aria-label="Remove authorization">Logout</Button>
-        : <Button className="btn modal-btn auth authorize" onClick={ this.authorize } aria-label="Apply given OAuth2 credentials">Authorize</Button>
+          ( isAuthorized ? <Button className="btn modal-btn auth authorize" onClick={ this.logout } aria-label="Remove authorization">退出登陆</Button>
+        : <Button className="btn modal-btn auth authorize" onClick={ this.authorize } aria-label="Apply given OAuth2 credentials">登陆</Button>
           )
         }
-          <Button className="btn modal-btn auth btn-done" onClick={ this.close }>Close</Button>
+          <Button className="btn modal-btn auth btn-done" onClick={ this.close }>关闭</Button>
         </div>
 
       </div>
